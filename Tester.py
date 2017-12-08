@@ -1,4 +1,4 @@
-import random
+import random , time
 
 def clear():
     for i in range(3):

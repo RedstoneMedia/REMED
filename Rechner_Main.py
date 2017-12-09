@@ -1,10 +1,12 @@
-import math,random,time
+import random
+import time
+
 
 class Rechnen:
 
     selflist = []
 
-    def __init__(self,List,punktvorstrich=1):
+    def __init__(self, List, punktvorstrich=1):
         self.List = List
         self.ergebnis = 0
         self.punktvorstrich = punktvorstrich
@@ -16,7 +18,6 @@ class Rechnen:
         while not self.only1(self.List) == True:
             del self.List[-1]
             print(self.List)
-
 
     @staticmethod
     def only1(l):

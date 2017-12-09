@@ -1,10 +1,13 @@
-import math , time
+import time
 from Rechner_Main import *
 
+space = ''
+for i in range(130):
+    space = space+' '
 
 def clear():
     for i in range(30):
-        print("                                                                                                                  ")
+        print(space)
 
 
 Command = input("bitte Command eingeben : ")
@@ -22,19 +25,19 @@ if LIST[0] == "umwandeln":
     flächen = 0
     Längen = 0
     try:
-        text = open(LIST[1],mode="r").readlines()
+        text = open(LIST[1],  mode="r").readlines()
     except:
         print("Datei nicht Gefunden oder Angegeben")
         quit()
     for i in text:
         count += 1
         Werte2 = i.split(",")
-        i = i.replace("\n","")
+        i = i.replace("\n",  "")
         Werte = i.split(",")
         if "^2" in Werte[1] or "^2" in Werte[2] or "a" in Werte[1] or "ha" in Werte[1] or "a" in Werte[2] or "ha" in Werte[2]:
             flächen += 1
-            Werte[1] = Werte[1].replace("^2","")
-            Werte[2] = Werte[2].replace("^2", "")
+            Werte[1] = Werte[1].replace("^2", "")
+            Werte[2] = Werte[2].replace("^2",  "")
             s1 = 0
             s2 = 0
 
@@ -84,16 +87,16 @@ if LIST[0] == "umwandeln":
 
             if "-" in str(schritte):
                 ergebnis = float(Werte[0])
-                schritte = str(schritte).replace("-","")
+                schritte = str(schritte).replace("-", "")
                 for b in range(int(schritte)):
                     ergebnis /= 100
-                ErGebnisse.append("Nummer : " + str(count) + " , " + str(ergebnis) + Werte2[2])
+                ErGebnisse.append("Nummer : " + str(count) + " ,  " + str(ergebnis) + Werte2[2])
 
             else:
                 ergebnis = float(Werte[0])
                 for b in range(int(schritte)):
                     ergebnis *= 100
-                ErGebnisse.append("Nummer : " + str(count) + " , " + str(ergebnis) + Werte2[2])
+                ErGebnisse.append("Nummer : " + str(count) + " ,  " + str(ergebnis) + Werte2[2])
             print("Ergebnis ist : " + str(ergebnis))
             clear()
 
@@ -144,21 +147,18 @@ if LIST[0] == "umwandeln":
                 else:
                     schritte += 0
 
-
-
-
             if "-" in str(schritte):
                 ergebnis = float(Werte[0])
-                schritte = str(schritte).replace("-","")
+                schritte = str(schritte).replace("-", "")
                 for b in range(int(schritte)):
                     ergebnis /= 10
-                ErGebnisse.append("Nummer : " + str(count) + " , " + str(ergebnis) + Werte2[2])
+                ErGebnisse.append("Nummer : " + str(count) + " ,  " + str(ergebnis) + Werte2[2])
 
             else:
                 ergebnis = float(Werte[0])
                 for b in range(int(schritte)):
                     ergebnis *= 10
-                ErGebnisse.append("Nummer : " + str(count) + " , " + str(ergebnis) + Werte2[2])
+                ErGebnisse.append("Nummer : " + str(count) + " ,  " + str(ergebnis) + Werte2[2])
             print("Ergebnis ist : " + str(ergebnis))
             clear()
 
@@ -171,12 +171,12 @@ if LIST[0] == "umwandeln":
 
 
 
-    delete = open("Umgerechnete_Einheiten.txt", mode="w")
+    delete = open("Umgerechnete_Einheiten.txt",  mode="w")
     delete.write("")
     delete.close()
 
     for i in ErGebnisse:
-        output = open("Umgerechnete_Einheiten.txt", mode="a")
+        output = open("Umgerechnete_Einheiten.txt",  mode="a")
         output.write(str(i))
         output.close()
 
@@ -184,9 +184,9 @@ if LIST[0] == "umwandeln":
     cdown = 6
     while not cdown == 0:
         print("  ------------------------------------------------------------------------------  ")
-        print(str(count) + " Ergebnise wurden berechnent !")
-        print(str(flächen) + " Flachen wurden berechnet !")
-        print(str(Längen) + " Längen wurden berechnet !")
+        print(str(count) + " Ergebnise wurden berechnent!")
+        print(str(flächen) + " Flachen wurden berechnet!")
+        print(str(Längen) + " Längen wurden berechnet!")
         print("Program endet in : " + str(cdown) + " Sekunden")
         print("  ------------------------------------------------------------------------------  ")
         time.sleep(1)
@@ -199,9 +199,3 @@ if LIST[0] == "umwandeln":
 else:
     Rechnen(List=LIST)
     print(Rechnen.selflist[0].ergebnis)
-
-
-
-
-
-

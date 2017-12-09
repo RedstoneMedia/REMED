@@ -21,6 +21,7 @@ parts/
 sdist/
 var/
 wheels/
+.idea/*
 *.egg-info/
 .installed.cfg
 *.egg
@@ -102,4 +103,6 @@ ENV/
 .idea/workspace.xml
 *.xml
 *.xml
+.idea/workspace.xml
+.idea/modules.xml
 .idea/workspace.xml

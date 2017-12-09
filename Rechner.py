@@ -1,4 +1,5 @@
-import math , time ,random
+import math , time
+from Rechner_Main import *
 
 
 def clear():
@@ -190,6 +191,10 @@ if LIST[0] == "umwandeln":
         cdown -= 1
         clear()
     quit()
+
+else:
+    Rechnen(List=LIST)
+    print(Rechnen.selflist[0])
 
 
 

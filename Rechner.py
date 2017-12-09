@@ -2,6 +2,9 @@ import math , time
 from Rechner_Main import *
 
 
+
+print("Hello Hauke")
+
 def clear():
     for i in range(30):
         print("                                                                                                                  ")

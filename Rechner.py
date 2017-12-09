@@ -194,7 +194,7 @@ if LIST[0] == "umwandeln":
 
 else:
     Rechnen(List=LIST)
-    print(Rechnen.selflist[0])
+    print(Rechnen.selflist[0].ergebnis)
 
 
 

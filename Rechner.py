@@ -1,7 +1,6 @@
 import math , time
 from Rechner_Main import *
 
-print("a")
 
 def clear():
     for i in range(30):

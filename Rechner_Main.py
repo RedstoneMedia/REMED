@@ -11,10 +11,12 @@ class Rechnen:
         self.selflist.append(self)
         self.Aus_Rechnen()
 
+    # hier bist du Rcihtig
     def Aus_Rechnen(self):
         while not self.only1(self.List) == True:
             del self.List[-1]
             print(self.List)
+
 
     @staticmethod
     def only1(l):

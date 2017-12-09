@@ -14,6 +14,8 @@ LIST = Command.split(" ")
 
 LIST[0] = LIST[0].lower()
 
+
+#das hier ist nur das umwandeln nicht der Rechner
 if LIST[0] == "umwandeln":
     ErGebnisse = []
     count = 0
@@ -192,6 +194,8 @@ if LIST[0] == "umwandeln":
         clear()
     quit()
 
+
+#hier must du hin oder in Rechner_Main
 else:
     Rechnen(List=LIST)
     print(Rechnen.selflist[0].ergebnis)

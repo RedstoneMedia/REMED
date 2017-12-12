@@ -13,6 +13,7 @@ def clear():
         print(space)
 
 
+
 Command = input("bitte Command eingeben : ")
 
 

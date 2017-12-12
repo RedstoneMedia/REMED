@@ -1,8 +1,9 @@
 def mathToList(calc):
+    #Variablen Initializieren
     numbers = []
     operators = []
     numbercount = 0
-    trash = ''
+
     for i in range(len(calc)):
         if calc[i].isdigit():
             try:
@@ -12,5 +13,13 @@ def mathToList(calc):
         else:
             numbercount += 1
             operators.append(calc[i])
-    return [numbers,operators]
+    calc = []
+    for i in range(len(numbers)):
+        calc.append(numbers[i])
+        try:
+            calc.append(operators[i])
+        except:
+            print('', end='')
+    return calc
+
 print(mathToList(input()))

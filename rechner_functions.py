@@ -19,7 +19,23 @@ def mathToList(calc):
         try:
             calc.append(operators[i])
         except:
-            print('', end='')
+            pass
     return calc
 
-print(mathToList(input()))
+#z.B. List = ['2', '+', '56']
+#z.B. index = 1
+#Als index immer das rechenzeichen, es werden dann die zahl davor mit der zahl danach gerechnet.
+def listCalculation(list, index):
+    operator = list[index]
+    result = 0
+    a = int(list[index-1])
+    b = int(list[index+1])
+    if operator == '+':
+        result = a+b
+    if operator == '-':
+        result = a-b
+    if operator == '*':
+        result = a*b
+    if operator == '/':
+        result = a/b
+    return result

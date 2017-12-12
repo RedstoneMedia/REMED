@@ -5,6 +5,9 @@ space = ''
 for i in range(130):
     space = space+' '
 
+
+print("Hello Hauke")
+
 def clear():
     for i in range(30):
         print(space)

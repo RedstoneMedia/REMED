@@ -197,12 +197,13 @@ if LIST[0] == "umwandeln":
         clear()
     quit()
 
-else :
+elif LIST[0] == "rechner":
     values = input("bitte calculation eingeben ! ")
-    List = mathToList(values)
-    output = listCalculation(List,1)
-    print(output)
-    print(get_Values(values))
+    List = get_Values(values)
+    print(List)
+    if not is_emty(List[1]):
+        outputKlammern = listCalculation(List[1],1)
+        print(outputKlammern)
 
 
 

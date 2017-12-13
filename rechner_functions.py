@@ -47,9 +47,7 @@ def get_Values(Values):
     temp3 = []
     temp4 = []
     temp5 = []
-    rechenzeichen = []
     klammern = []
-    klammernrechen = []
     k = False
     for i in temp:
             if not k == True:
@@ -62,7 +60,7 @@ def get_Values(Values):
                     else:
                         temp2.append("".join(temp3))
                         temp3 = []
-                        rechenzeichen.append(i)
+                        temp2.append(i)
             else:
                 if i == ")":
                     k = False
@@ -76,15 +74,12 @@ def get_Values(Values):
                     klammern.append("".join(temp4))
                     temp4 = []
                     if not str(i) == "":
-                        klammernrechen.append(str(i))
+                        klammern.append(str(i))
 
     temp2.append("".join(temp3))
 
-    for i in temp2:
-        if not i == "":
-            temp5.append(str(i))
-
-    return (temp5,rechenzeichen,klammern,klammernrechen)
+    #gibt bei klammern "" zurück damit mann später augerechnete zahl einsetzen kann !
+    return (temp2,klammern)
 
 
 def is_single_item_list(list_to_check):
@@ -98,5 +93,11 @@ def is_single_item_list(list_to_check):
         _ = list_to_check[1]
     except IndexError:
         return True
-    #wenn nicht dan nicht
+
     return False
+
+def is_emty(List):
+    try:
+        _ = List[0]
+    except IndexError:
+        return True

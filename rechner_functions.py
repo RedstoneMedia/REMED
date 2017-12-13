@@ -85,3 +85,18 @@ def get_Values(Values):
             temp5.append(str(i))
 
     return (temp5,rechenzeichen,klammern,klammernrechen)
+
+
+def is_single_item_list(list_to_check):
+    #Checkt ob Liste leer ist
+    try:
+        _ = list_to_check[0]
+    except IndexError:
+        return False
+    #chekt ob nur eins drinne ist
+    try:
+        _ = list_to_check[1]
+    except IndexError:
+        return True
+    #wenn nicht dan nicht
+    return False
